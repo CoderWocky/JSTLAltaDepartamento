@@ -15,6 +15,12 @@ url="jdbc:oracle:thin:@localhost:1521:XE" user="system" password="javaoracle"/>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Alta de Departamento</title>
+    <style>
+      label {
+        display: inline-block;
+        width: 10%;
+      }
+    </style>
   </head>
   <body>
     <c:if test="${param.codigo != null}">

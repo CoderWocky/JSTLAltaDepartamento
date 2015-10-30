@@ -11,7 +11,7 @@ public final class alta_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   private static java.util.List<String> _jspx_dependants;
 
-  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_sql_update;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_sql_update_var;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_if_test;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_sql_setDataSource_user_url_password_driver_nobody;
 
@@ -22,13 +22,13 @@ public final class alta_jsp extends org.apache.jasper.runtime.HttpJspBase
   }
 
   public void _jspInit() {
-    _jspx_tagPool_sql_update = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_sql_update_var = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_c_if_test = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_sql_setDataSource_user_url_password_driver_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
 
   public void _jspDestroy() {
-    _jspx_tagPool_sql_update.release();
+    _jspx_tagPool_sql_update_var.release();
     _jspx_tagPool_c_if_test.release();
     _jspx_tagPool_sql_setDataSource_user_url_password_driver_nobody.release();
   }
@@ -71,6 +71,12 @@ public final class alta_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("  <head>\r\n");
       out.write("    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
       out.write("    <title>Alta de Departamento</title>\r\n");
+      out.write("    <style>\r\n");
+      out.write("      label {\r\n");
+      out.write("        display: inline-block;\r\n");
+      out.write("        width: 10%;\r\n");
+      out.write("      }\r\n");
+      out.write("    </style>\r\n");
       out.write("  </head>\r\n");
       out.write("  <body>\r\n");
       out.write("    ");
@@ -141,6 +147,10 @@ public final class alta_jsp extends org.apache.jasper.runtime.HttpJspBase
         if (_jspx_meth_sql_update_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_0, _jspx_page_context))
           return true;
         out.write("\r\n");
+        out.write("      <p>");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${numero}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write(" registros insertados</p>\r\n");
+        out.write("      <br/>\r\n");
         out.write("    ");
         int evalDoAfterBody = _jspx_th_c_if_0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -160,9 +170,10 @@ public final class alta_jsp extends org.apache.jasper.runtime.HttpJspBase
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  sql:update
-    org.apache.taglibs.standard.tag.rt.sql.UpdateTag _jspx_th_sql_update_0 = (org.apache.taglibs.standard.tag.rt.sql.UpdateTag) _jspx_tagPool_sql_update.get(org.apache.taglibs.standard.tag.rt.sql.UpdateTag.class);
+    org.apache.taglibs.standard.tag.rt.sql.UpdateTag _jspx_th_sql_update_0 = (org.apache.taglibs.standard.tag.rt.sql.UpdateTag) _jspx_tagPool_sql_update_var.get(org.apache.taglibs.standard.tag.rt.sql.UpdateTag.class);
     _jspx_th_sql_update_0.setPageContext(_jspx_page_context);
     _jspx_th_sql_update_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_0);
+    _jspx_th_sql_update_0.setVar("numero");
     int[] _jspx_push_body_count_sql_update_0 = new int[] { 0 };
     try {
       int _jspx_eval_sql_update_0 = _jspx_th_sql_update_0.doStartTag();
@@ -200,7 +211,7 @@ public final class alta_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_th_sql_update_0.doCatch(_jspx_exception);
     } finally {
       _jspx_th_sql_update_0.doFinally();
-      _jspx_tagPool_sql_update.reuse(_jspx_th_sql_update_0);
+      _jspx_tagPool_sql_update_var.reuse(_jspx_th_sql_update_0);
     }
     return false;
   }
