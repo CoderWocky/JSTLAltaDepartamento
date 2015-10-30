@@ -11,6 +11,7 @@ public final class alta_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   private static java.util.List<String> _jspx_dependants;
 
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_sql_param_value_nobody;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_sql_update_var;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_if_test;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_sql_setDataSource_user_url_password_driver_nobody;
@@ -22,12 +23,14 @@ public final class alta_jsp extends org.apache.jasper.runtime.HttpJspBase
   }
 
   public void _jspInit() {
+    _jspx_tagPool_sql_param_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_sql_update_var = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_c_if_test = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_sql_setDataSource_user_url_password_driver_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
 
   public void _jspDestroy() {
+    _jspx_tagPool_sql_param_value_nobody.release();
     _jspx_tagPool_sql_update_var.release();
     _jspx_tagPool_c_if_test.release();
     _jspx_tagPool_sql_setDataSource_user_url_password_driver_nobody.release();
@@ -186,13 +189,19 @@ public final class alta_jsp extends org.apache.jasper.runtime.HttpJspBase
         }
         do {
           out.write("\r\n");
-          out.write("        insert into dept values (");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${param.codigo}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write(", '");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${param.nombre}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("', '");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${param.localidad}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("')\r\n");
+          out.write("        insert into dept values (?,?,?)\r\n");
+          out.write("        ");
+          if (_jspx_meth_sql_param_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_sql_update_0, _jspx_page_context, _jspx_push_body_count_sql_update_0))
+            return true;
+          out.write("\r\n");
+          out.write("        ");
+          if (_jspx_meth_sql_param_1((javax.servlet.jsp.tagext.JspTag) _jspx_th_sql_update_0, _jspx_page_context, _jspx_push_body_count_sql_update_0))
+            return true;
+          out.write("\r\n");
+          out.write("        ");
+          if (_jspx_meth_sql_param_2((javax.servlet.jsp.tagext.JspTag) _jspx_th_sql_update_0, _jspx_page_context, _jspx_push_body_count_sql_update_0))
+            return true;
+          out.write("\r\n");
           out.write("      ");
           int evalDoAfterBody = _jspx_th_sql_update_0.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -213,6 +222,60 @@ public final class alta_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_th_sql_update_0.doFinally();
       _jspx_tagPool_sql_update_var.reuse(_jspx_th_sql_update_0);
     }
+    return false;
+  }
+
+  private boolean _jspx_meth_sql_param_0(javax.servlet.jsp.tagext.JspTag _jspx_th_sql_update_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_sql_update_0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  sql:param
+    org.apache.taglibs.standard.tag.rt.sql.ParamTag _jspx_th_sql_param_0 = (org.apache.taglibs.standard.tag.rt.sql.ParamTag) _jspx_tagPool_sql_param_value_nobody.get(org.apache.taglibs.standard.tag.rt.sql.ParamTag.class);
+    _jspx_th_sql_param_0.setPageContext(_jspx_page_context);
+    _jspx_th_sql_param_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_sql_update_0);
+    _jspx_th_sql_param_0.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${param.codigo}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    int _jspx_eval_sql_param_0 = _jspx_th_sql_param_0.doStartTag();
+    if (_jspx_th_sql_param_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_sql_param_value_nobody.reuse(_jspx_th_sql_param_0);
+      return true;
+    }
+    _jspx_tagPool_sql_param_value_nobody.reuse(_jspx_th_sql_param_0);
+    return false;
+  }
+
+  private boolean _jspx_meth_sql_param_1(javax.servlet.jsp.tagext.JspTag _jspx_th_sql_update_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_sql_update_0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  sql:param
+    org.apache.taglibs.standard.tag.rt.sql.ParamTag _jspx_th_sql_param_1 = (org.apache.taglibs.standard.tag.rt.sql.ParamTag) _jspx_tagPool_sql_param_value_nobody.get(org.apache.taglibs.standard.tag.rt.sql.ParamTag.class);
+    _jspx_th_sql_param_1.setPageContext(_jspx_page_context);
+    _jspx_th_sql_param_1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_sql_update_0);
+    _jspx_th_sql_param_1.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${param.nombre}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    int _jspx_eval_sql_param_1 = _jspx_th_sql_param_1.doStartTag();
+    if (_jspx_th_sql_param_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_sql_param_value_nobody.reuse(_jspx_th_sql_param_1);
+      return true;
+    }
+    _jspx_tagPool_sql_param_value_nobody.reuse(_jspx_th_sql_param_1);
+    return false;
+  }
+
+  private boolean _jspx_meth_sql_param_2(javax.servlet.jsp.tagext.JspTag _jspx_th_sql_update_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_sql_update_0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  sql:param
+    org.apache.taglibs.standard.tag.rt.sql.ParamTag _jspx_th_sql_param_2 = (org.apache.taglibs.standard.tag.rt.sql.ParamTag) _jspx_tagPool_sql_param_value_nobody.get(org.apache.taglibs.standard.tag.rt.sql.ParamTag.class);
+    _jspx_th_sql_param_2.setPageContext(_jspx_page_context);
+    _jspx_th_sql_param_2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_sql_update_0);
+    _jspx_th_sql_param_2.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${param.localidad}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    int _jspx_eval_sql_param_2 = _jspx_th_sql_param_2.doStartTag();
+    if (_jspx_th_sql_param_2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_sql_param_value_nobody.reuse(_jspx_th_sql_param_2);
+      return true;
+    }
+    _jspx_tagPool_sql_param_value_nobody.reuse(_jspx_th_sql_param_2);
     return false;
   }
 }

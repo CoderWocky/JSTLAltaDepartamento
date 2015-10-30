@@ -25,7 +25,10 @@ url="jdbc:oracle:thin:@localhost:1521:XE" user="system" password="javaoracle"/>
   <body>
     <c:if test="${param.codigo != null}">
       <sql:update var="numero">
-        insert into dept values (${param.codigo}, '${param.nombre}', '${param.localidad}')
+        insert into dept values (?,?,?)
+        <sql:param value="${param.codigo}"/>
+        <sql:param value="${param.nombre}"/>
+        <sql:param value="${param.localidad}"/>
       </sql:update>
       <p>${numero} registros insertados</p>
       <br/>
